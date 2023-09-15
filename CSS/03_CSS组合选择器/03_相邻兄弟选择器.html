@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>相邻兄弟选择器</title>
+
+        <style>
+            h2+p {
+                color: red;
+            }
+
+            /* 相邻兄弟选择器，只有紧跟在h2后面的p元素才会被改为红包 */
+        </style>
+    </head>
+
+    <body>
+        <h2>标题</h2>
+        <p>这是一个段落</p>
+        <p>这是一个段落</p>
+
+        <h2>标题</h2>
+        <p>这是一个段落</p>
+
+        <h2>标题</h2>
+        <p>这是一个段落</p>
+
+        <h3>标题</h3>
+        <p>这是一个段落</p>
+    </body>
+
+</html>

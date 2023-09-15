@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>一般兄弟选择器</title>
+
+        <style>
+            h2~p {
+                text-indent: 2em;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <h2>标题</h2>
+            <p>正文正文正文</p>
+            <p>正文正文正文</p>
+            <div>
+                <p>正文正文正文</p>
+                <!-- 父标签与h2不共享所以没有被选择 -->
+            </div>
+        </div>
+
+        <p>正文正文正文</p>
+        <!-- 父标签与h2不共享所以没有被选择 -->
+    </body>
+
+</html>

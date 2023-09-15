@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>表单</title>
+    </head>
+
+    <body>
+        <form action="/submit" method="get">
+            <label for="username">用户名：</label>
+            <input type="text" name="username" id="1"><br>
+            <label for="gender">性别：</label>
+            <input type="radio" name="gender" value="male">男
+            <input type="radio" name="gender" value="female">女<br>
+            <label for="hobby">爱好：</label>
+            <input type="checkbox" name="hobby" value="football">足球
+            <input type="checkbox" name="hobby" value="basketball">篮球<br>
+            <label for="constellation">星座</label>
+            <select name="constellation">
+                <option value="Leo">狮子座</option>
+                <option value="Aries">白羊座</option>
+                <option value="Sagittarius">射手座</option>
+            </select><br>
+            <label for="motto">座右铭：</label>
+            <textarea name="motto" cols="30" rows="10">填写你的座右铭</textarea>
+            <br>
+            <label for="car">你喜欢的车：</label>
+            <select name="car">
+                <optgroup label="German Cars">
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                </optgroup>
+                <optgroup label="American Cars">
+                    <option value="tesla">Tesla</option>
+                </optgroup>
+            </select>
+            <br>
+            <button type="submit">提交</button>
+        </form>
+    </body>
+
+</html>

@@ -1,6 +1,11 @@
-# HTML 列表标签学习笔记
+# 列表标签
 
 在HTML中，有三种主要类型的列表：无序列表、有序列表和定义列表。下面是各种列表标签的详细解释和示例。
+
+- `ul`: Unordered List（无序列表）
+- `li`: List Item（列表项）
+- `ol`: Ordered List（有序列表）
+- `dl`: Description List（定义列表）
 
 ---
 

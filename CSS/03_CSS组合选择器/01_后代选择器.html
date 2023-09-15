@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>后代选择器</title>
+
+        <style>
+            div p {
+                color: red;
+                font-size: larger;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <p>被后代选择器选择1</p>
+        </div>
+
+        <div>
+            <article>
+                <p>被后代选择器选择2,注意与子代选择器的区别</p>
+            </article>
+        </div>
+
+        <p>不会被选择，因为不是div的后代</p>
+    </body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>子代选择器</title>
+
+        <style>
+            div>p {
+                color: red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <p>是div子代，所以为红色</p>
+        </div>
+
+        <div>
+            <article>
+                <p>是div的后代，但不是子代，因此不是红色</p>
+            </article>
+        </div>
+    </body>
+
+</html>
