@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>not() 选择器示例</title>
+        <style>
+            /* 默认样式 */
+            div {
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+                background-color: blue;
+                text-align: center;
+                line-height: 100px;
+                color: white;
+            }
+
+            /* 当 div 元素没有 .active 类时应用的样式 */
+            div:not(.active) {
+                opacity: 0.5;
+            }
+
+            /* 当 div 元素有 .active 类时应用的样式 */
+            .active {
+                background-color: red;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h1>not() 选择器示例</h1>
+
+        <!-- div 元素 -->
+        <div class="active">Active</div>
+        <div>Inactive</div>
+        <div>Inactive</div>
+        <div class="active">Active</div>
+        <div>Inactive</div>
+
+    </body>
+
+</html>

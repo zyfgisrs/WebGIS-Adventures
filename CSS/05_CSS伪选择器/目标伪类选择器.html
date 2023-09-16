@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>:target 伪类选择器示例</title>
+        <style>
+            /* 初始样式 */
+            section {
+                width: 300px;
+                padding: 20px;
+                margin: 10px;
+                border: 1px solid #ccc;
+                display: none;
+            }
+
+            /* 当 section 元素被选中时应用的样式 */
+            section:target {
+                display: block;
+                background-color: #f9f9f9;
+                border-color: #007bff;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h1>target 伪类选择器示例</h1>
+
+        <!-- 导航链接 -->
+        <nav>
+            <a href="#section1">显示 Section 1</a>
+            <a href="#section2">显示 Section 2</a>
+            <a href="#section3">显示 Section 3</a>
+        </nav>
+
+        <!-- Section 内容 -->
+        <section id="section1">
+            <h2>Section 1</h2>
+            <p>This is the content for section 1.</p>
+        </section>
+
+        <section id="section2">
+            <h2>Section 2</h2>
+            <p>This is the content for section 2.</p>
+        </section>
+
+        <section id="section3">
+            <h2>Section 3</h2>
+            <p>This is the content for section 3.</p>
+        </section>
+
+    </body>
+
+</html>

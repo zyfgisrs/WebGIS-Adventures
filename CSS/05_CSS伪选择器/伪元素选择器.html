@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>伪元素选择器</title>
+
+        <style>
+            /* 段落的开始位置加上前缀 */
+            .div1 p::before {
+                content: "前缀: ";
+            }
+
+            /* 段落的最后加上句号 */
+            .div1 p::after {
+                content: "。";
+            }
+
+            /* 段落的第一个字母大小为32px */
+            .div2 p::first-letter {
+                font-size: 32px;
+            }
+
+            /* 第一行为大写 */
+            .div2 p::first-line {
+                text-transform: uppercase;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="div1">
+            <p>这是一段前缀</p>
+        </div>
+
+
+        <div class="div2">
+            <p>abcdefg<br>sssssssssss<br>sssssss</p>
+        </div>
+
+    </body>
+
+</html>

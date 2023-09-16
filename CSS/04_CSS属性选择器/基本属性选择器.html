@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>基本属性选择器</title>
+
+        <style>
+            /* 使用基本属性选择器为所有带有 "disabled" 属性的输入框设置样式 */
+            input[disabled] {
+                background-color: #f2f2f2;
+                cursor: not-allowed;
+            }
+
+            /* 使用基本属性选择器为所有带有 "target" 属性的链接设置样式 */
+            a[target] {
+                color: red;
+            }
+
+            /* 使用基本属性选择器为所有带有 "data-type" 属性的段落设置样式 */
+            p[data-type] {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+    <body>
+        <input type="text" disabled="false" placeholder="我是禁用的">
+        <input type="text" placeholder="我是启用的">
+
+        <a href="http://www.baidu.com" target="_blank">百度</a>
+
+        <a href="http://www.weibo.com">微博</a>
+
+        <p data-type="important">这是一个重要的段落</p>
+
+        <p>这是一个普通的段落</p>
+    </body>
+
+</html>

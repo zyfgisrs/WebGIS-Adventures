@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>getElementById example</title>
+
+        <script>
+            // 确保文档加载完毕后执行JavaScript代码
+            window.onload = function () {
+                // 使用getElementById获取元素
+                const titleElement = document.getElementById("main-title");
+
+                console.log(titleElement);
+
+                titleElement.textContent = "New Title: getElementById Example";
+
+                titleElement.style.color = "blue";
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1 id="main-title">Original Title</h1>
+    </body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>存在和属性值选择器</title>
+        <style>
+            input[placeholder] {
+                background-color: #f2f2f2;
+            }
+
+            input[placeholder="我是禁用的"] {
+                cursor: not-allowed;
+            }
+        </style>
+    </head>
+
+    <body>
+        <input type="text" placeholder="我是禁用的">
+        <input type="text" placeholder="我是启用的">
+    </body>
+
+</html>

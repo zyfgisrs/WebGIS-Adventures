@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>::selection 示例</title>
+        <style>
+            /* 设置页面的默认字体和颜色 */
+            body {
+                font-family: Arial, sans-serif;
+                color: #333;
+            }
+
+            /* 使用 ::selection 选择器改变选中文本的样式 */
+            ::selection {
+                background-color: yellow;
+                color: black;
+            }
+
+            /* 如果你想对特定元素内的选中文本进行不同的样式设置，也可以这样做 */
+            p::selection {
+                background-color: lightblue;
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h1>::selection 示例</h1>
+
+        <p>请尝试选中这段文本，你会看到它的背景颜色和字体颜色发生了改变。</p>
+
+        <div>
+            这段文本也是可以选中的，但由于它不在 <code>p</code> 元素中，所以选中时的样式与上面的段落不同。
+        </div>
+
+    </body>
+
+</html>

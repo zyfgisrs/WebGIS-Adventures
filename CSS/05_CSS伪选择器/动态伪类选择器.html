@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>动态伪类选择器</title>
+
+        <style>
+            /* 鼠标悬停链接变为红色 */
+            a:hover {
+                color: red;
+            }
+
+            /* 鼠标点击变为绿色 */
+            a:active {
+                color: aquamarine;
+            }
+
+            /* 用户访问过的链接变为黄色 */
+            a:visited {
+                color: yellow;
+            }
+
+            /* 选择获得键盘焦点的元素 */
+            input:focus {
+                background-color: burlywood;
+            }
+        </style>
+    </head>
+
+    <body>
+        <a href="http://www.baidu.com">百度主页</a><br>
+
+        <input type="text" placeholder="选择获得键盘焦点的元素。">
+
+    </body>
+
+</html>

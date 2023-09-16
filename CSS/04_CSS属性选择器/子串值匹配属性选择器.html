@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>子串值匹配属性选择器</title>
+        <style>
+            /* 开头匹配 */
+            a[href^="https"] {
+                color: aqua;
+            }
+
+            /* 结尾匹配 */
+            a[href*="weibo"] {
+                color: red;
+            }
+
+            /* 包含匹配 */
+            img[src$=".jpg"] {
+                border: 1px solid #ccc;
+            }
+        </style>
+    </head>
+
+    <body>
+        <a href="http://www.baidu.com">百度</a><br>
+        <a href="https://www.baidu.com">百度</a><br>
+        <a href="http://www.weibo.com">微博</a><br>
+
+        <img src="ic069.jpg" alt="JPG图片" width="200px" height="200px"><br>
+        <img src="ic069.png" alt="png图片" width="200px" height="200px">
+
+    </body>
+
+</html>

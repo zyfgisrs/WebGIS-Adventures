@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>结构伪类选择器</title>
+
+        <style>
+            /* 父元素的第一个子元素 */
+            ol li:first-child {
+                font-weight: bold;
+            }
+
+            /* 父元素的最后一个子元素 */
+            ol li:last-child {
+                font-style: italic;
+            }
+
+            /* 父元素的奇数位置元素 */
+            ul li:nth-child(odd) {
+                font-weight: bold;
+            }
+
+            /* 父元素的偶数位置元素 */
+            ul li:nth-child(even) {
+                font-style: italic;
+            }
+        </style>
+    </head>
+
+    <body>
+        <ol>
+            <li>第一点</li>
+            <li>第二点</li>
+            <li>第三点</li>
+            <li>第四点</li>
+        </ol>
+
+        <ul>
+            <li>第一点</li>
+            <li>第二点</li>
+            <li>第三点</li>
+            <li>第四点</li>
+            <li>第五点</li>
+            <li>第六点</li>
+        </ul>
+
+
+    </body>
+
+</html>

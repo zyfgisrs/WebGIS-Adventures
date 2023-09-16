@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>querySelector</title>
+
+        <script>
+            window.onload = function () {
+                // 使用querySelector获取元素
+                const firstParagraph = document.querySelector("#first");
+                console.log(firstParagraph);
+                firstParagraph.style.color = "blue";
+
+                //使用querySelectorAll获取元素
+                const paragraphs = document.querySelectorAll(".text");
+                console.log(paragraphs);
+                //修改字体粗细
+                for (let i = 0; i < paragraphs.length; i++) {
+                    paragraphs[i].style.fontWeight = "bold";
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <div>
+            <p class="text" id="first">This is the first paragraph.</p>
+            <p class="text">This is the second paragraph.</p>
+        </div>
+    </body>
+
+</html>
