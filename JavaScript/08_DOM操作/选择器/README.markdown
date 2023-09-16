@@ -25,7 +25,7 @@
 
 - #### `getElementById`：这个方法返回与指定ID匹配的元素。
 
-- #### `getElementById（）`返回的是一个元素，因为HTML中ID是唯一的。
+- #### `getElementById`返回的是一个元素，因为HTML中ID是唯一的。
 
   ```javascript
   const myElement = document.getElementById("myId");

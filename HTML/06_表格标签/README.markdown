@@ -16,7 +16,6 @@
    - [表体 (`<tbody>`)](#表体-tbody)
    - [表尾 (`<tfoot>`)](#表尾-tfoot)
 3. [常用属性](#常用属性)
-4. [CSS 应用](#css-应用)
 
 ---
 
@@ -137,26 +136,5 @@
 <td colspan="2">横跨两列</td>
 ```
 
----
 
-## CSS 应用
-
-CSS可以用于增强表格的可读性和外观。
-
-```html
-<style>
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  th, td {
-    border: 1px solid black;
-    text-align: center;
-    padding: 8px;
-  }
-  th {
-    background-color: #f2f2f2;
-  }
-</style>
-```
 

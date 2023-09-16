@@ -6,20 +6,19 @@ HTML表单是收集用户输入的一种强大工具。
 
 ## 目录
 
-1. [基础标签](#基础标签)
+- [基础标签](#基础标签)
    - [`<form>`](#form)
    - [`<input>`](#input)
    - [`<label>`](#label)
    - [`<textarea>`](#textarea)
    - [`<button>`](#button)
-2. [选择元素](#选择元素)
+- [选择元素](#选择元素)
    - [`<select>` 和 `<option>`](#select-和-option)
    - [`<optgroup>`](#optgroup)
-3. [其他输入类型](#其他输入类型)
+- [其他输入类型](#其他输入类型)
    - [`checkbox` 和 `radio`](#checkbox-和-radio)
    - [`date`, `color`, `file`](#date-color-file)
-4. [常用属性](#常用属性)
-5. [CSS应用](#css应用)
+- [常用属性](#常用属性)
 
 ---
 
@@ -132,28 +131,5 @@ HTML表单是收集用户输入的一种强大工具。
 - `required`: 该字段是否必填。
 - `disabled`: 禁用输入字段。
 
----
 
-## CSS应用
-
-通过CSS，你可以自定义表单元素的外观。
-
-```html
-<style>
-  input[type="text"] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-  }
-  button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-  }
-</style>
-```
 
