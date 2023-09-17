@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>属性节点</title>
+
+        <script>
+            window.onload = function () {
+                const p = document.getElementById("123");
+                const node = document.createAttribute("data-info");
+                node.value = "这是一个段落";
+                p.setAttributeNode(node);
+                console.log(p.getAttribute("data-info"));
+                const pNode = p.getAttributeNode("data-info");
+                pNode.value = "这是一个被修改的段落";
+                console.log(p.getAttribute("data-info"));
+            }
+        </script>
+    </head>
+
+    <body>
+        <p id="123"></p>
+    </body>
+
+</html>

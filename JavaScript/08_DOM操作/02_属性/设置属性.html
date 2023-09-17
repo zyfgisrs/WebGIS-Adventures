@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>设置属性</title>
+        <script>
+            window.onload = function () {
+                const btn1 = document.getElementById("btn1");
+                const btn2 = document.getElementById("btn2");
+                const text = document.getElementById("text");
+
+                btn1.addEventListener("click", function () {
+                    text.setAttribute("style", "color: red; font-size: 20px;");
+                    text.setAttribute("data-info", "使用setAttribute设置属性")
+                    text.innerText = "使用setAttribute设置属性";
+                })
+
+                btn2.addEventListener("click", function () {
+                    text.style.color = "blue";
+                    text.style.fontSize = "30px";
+                    text.dataset.info = "直接设置属性";
+                    text.innerText = "直接设置属性";
+                })
+            }
+        </script>
+
+    </head>
+
+    <body>
+        <button id="btn1">使用setAttribute设置属性</button>
+        <button id="btn2">直接设置属性</button>
+        <p id="text">这是一个段落</p>
+    </body>
+
+</html>

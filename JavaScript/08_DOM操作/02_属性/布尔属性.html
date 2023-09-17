@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>布尔属性</title>
+
+        <style>
+            /* 属性选择器 */
+            input[type="checkbox"] {
+
+                width: 20px;
+
+                height: 20px;
+
+                background-color: honeydew;
+
+            }
+        </style>
+
+        <script>
+            window.onload = function () {
+                //属性选择器，选择type属性为checkbox的input元素
+                const checkbox = document.querySelector("input[type='checkbox']");
+
+                checkbox.addEventListener("click", function () {
+
+                    console.log(checkbox.checked);
+
+                })
+
+            }
+        </script>
+    </head>
+
+    <body>
+        <input type="checkbox" checked>
+    </body>
+
+</html>

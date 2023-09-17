@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>获取属性</title>
+        <style>
+            .myDiv {
+                width: 200px;
+                height: 200px;
+                background-color: red;
+            }
+        </style>
+
+        <script>
+            window.onload = function () {
+                const link = document.getElementById("111");
+                console.log(link.getAttribute("href"));//  获取href属性，输出http://www.baidu.com
+                console.log(link.getAttribute("id"));//获取id属性，输出111
+
+                const myDiv = document.getElementsByClassName("myDiv")[0];//获取div元素
+                console.log(myDiv.getAttribute("class"));//获取class属性，输出myDiv
+                console.log(myDiv.style.color);//直接获取属性，输出red
+
+                console.log(myDiv.style.backgroundColor);//不是行内样式，输出空
+                //style属性只能获取行内样式，不能获取外部样式
+
+                const p = document.getElementById("p010");//获取p元素
+                console.log(p.dataset.p);//获取自定义属性
+            }
+        </script>
+    </head>
+
+    <body>
+        <a id="111" href="http://www.baidu.com">百度</a>
+
+        <div class="myDiv" style="color: red;">
+            <p id="p010" data-p="这是一个段落">这是一个段落</p>
+        </div>
+    </body>
+
+</html>

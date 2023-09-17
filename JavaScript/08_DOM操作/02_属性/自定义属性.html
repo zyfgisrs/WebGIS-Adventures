@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>自定义属性</title>
+
+        <script>
+            window.onload = function () {
+                const div1 = document.getElementById('div1'); //获取div1元素
+                console.log(div1.getAttribute('data-my-attribute')); //getAttribute()获取自定义属性
+                console.log(div1.dataset.myAttribute); //dataset获取自定义属性
+
+                div1.dataset.myAttribute = 'new value'; //dataset修改自定义属性
+                console.log(div1.dataset.myAttribute);
+
+
+
+                div1.dataset.newAttribute1 = 'new Attribute1'; //dataset新增自定义属性
+                div1.setAttribute('data-new-attribute2', 'new Attribute2'); //setAttribute()新增自定义属性
+                console.log(div1.dataset.newAttribute1);
+                console.log(div1.dataset.newAttribute2);
+
+
+                console.log('遍历dataset:');
+                //遍历dataset
+                for (const key in div1.dataset) {
+                    console.log(key + ':' + div1.dataset[key]);
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="div1" data-my-attribute="attribute1"></div>
+    </body>
+
+</html>
