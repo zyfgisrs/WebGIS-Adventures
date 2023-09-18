@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>循环设置样式</title>
+
+    <script>
+        window.onload = function(){
+            const div1 = document.getElementById('div1');
+            const styles = {
+                color:'red',
+                background :'blue'
+            }
+            for(const [key, value] of Object.entries(styles)){
+                div1.style[key] = value;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="div1">
+        hello, world!
+    </div>  
+</body>
+</html>

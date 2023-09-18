@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>删除样式</title>
+    <style>
+        #div1 {
+            width: 100px;
+            height: 200px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            const div1 = document.getElementById('div1');
+            div1.style.color = 'red';//设置了内联样式
+
+            console.log(div1.style.color);//打印内联样式中color属性
+
+            div1.removeAttribute('style'); //删除了内联样式
+
+            console.log(div1.style.color);//输出为空，因为内联样式被删除
+        }
+    </script>
+</head>
+<body>
+    <div id="div1">
+        hello, world!
+    </div>
+</body>
+</html>

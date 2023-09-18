@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>操作CSS变量</title>
+    <script>
+        window.onload = function(){
+            const div1 = document.getElementById('div1');
+            const cssStyle = div1.style;
+            const color = cssStyle.getPropertyValue('color');
+            console.log(color); //控制台输出aqua
+            
+            //设置CSS变量
+            cssStyle.setProperty('background', 'red', 'important');
+            
+            console.log(cssStyle.length);
+            
+            //遍历CSSStyleDeclaration实例
+            for(let i = 0; i < cssStyle.length; i++){
+                const propertyName = cssStyle[i];
+                const propertyValue = cssStyle.getPropertyValue(propertyName);
+                console.log(`${propertyName}: ${propertyValue}`);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="div1" style="color: aqua;">
+        hello, world!
+    </div>
+</body>
+</html>

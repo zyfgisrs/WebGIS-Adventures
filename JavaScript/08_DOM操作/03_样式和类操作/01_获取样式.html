@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取样式</title>
+
+    <style>
+        #div1{
+            width: 100px;
+            height: 200px;
+        }
+    </style>
+
+    <script>
+        window.onload = function(){
+            const div = document.getElementById("div1");
+            const CSSstyle = div.style;//通过style获取CSSStyleDeclaration
+            console.log(CSSstyle);//打印CSSStyleDeclaration实例
+            const colorValue = CSSstyle.getPropertyValue("color");
+
+            const computedStyle = window.getComputedStyle(div);//通过getComputedStyle获取CSSStyleDeclaration
+            console.log(computedStyle);//打印CSSStyleDeclaration
+        }   
+    </script>
+</head>
+<body>
+    <div id="div1"  style="color: bisque;">
+        <p>DIV</p>
+    </div>
+</body>
+</html>

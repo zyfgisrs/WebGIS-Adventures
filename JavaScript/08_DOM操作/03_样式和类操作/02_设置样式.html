@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设置样式</title>
+
+    <script>
+        window.onload = function(){
+            const div1 = document.getElementById('div1');
+            div1.style.color = "red";
+
+            console.log(div1.style.color);
+
+            const div2 = document.getElementById('div2')
+
+            div2.setAttribute('style', 'width: 100px; height: 200px;');
+            console.log(div2.style.width);
+            console.log(div2.style.height);
+        }
+    </script>
+</head>
+<body>
+    <div id="div1">
+        hello,world1!
+    </div>
+
+    <div id="div2">
+        hello,world2!
+    </div>
+</body>
+</html>
