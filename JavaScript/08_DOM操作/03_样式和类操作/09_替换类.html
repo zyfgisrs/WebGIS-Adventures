@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>替换类</title>
+
+    <style>
+        .style1{
+            color: red;
+            font-size: 20px;
+        }
+
+        .style2{
+            color: blueviolet;
+            font-size: 50px;
+        }
+    </style>
+
+    <script>
+        window.onload = function(){
+            const button1 = document.getElementById('b1');
+            const para = document.getElementById('p1');
+
+
+            button1.addEventListener("click", function(){
+                if(para.classList.contains('style1')){
+                    para.classList.replace('style1','style2'); //替换类
+                }else{
+                    para.classList.replace('style2','style1'); //替换类
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+    <p id="p1" class="style1">样式可以变化的文字样式可以变化的文字</p>
+
+    <button id="b1">修改字体样式</button>
+</body>
+</html>

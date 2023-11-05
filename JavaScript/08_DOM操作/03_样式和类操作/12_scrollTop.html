@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>scrollTop and scrollLeft Example</title>
+  <style>
+    #box {
+      width: 200px;
+      height: 200px;
+      overflow: auto;
+    }
+    #content {
+      width: 400px;
+      height: 400px;
+    }
+  </style>
+
+<script>
+    const box = document.getElementById("box");
+    const scrollToButton = document.getElementById("scrollTo");
+
+    scrollToButton.addEventListener("click", function() {
+      // 设置 scrollTop 和 scrollLeft 值
+      box.scrollTop = 50;
+      box.scrollLeft = 50;
+    });
+  </script>
+</head>
+<body>
+
+  <div id="box">
+    <div id="content">This is a large content box.</div>
+  </div>
+  <button id="scrollTo">Scroll To (50, 50)</button>
+</body>
+</html>

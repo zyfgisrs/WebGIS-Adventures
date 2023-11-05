@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特殊类型的函数</title>
+</head>
+
+<script>
+    //嵌套函数
+    function outerFunction1(){
+        console.log('Outer Function');
+
+
+        function innerFunction(){
+            console.log('Inner Function');
+        }
+
+        innerFunction();
+    }
+
+    outerFunction1();
+
+    function createCounter(){
+        let count = 0;
+        return function(){
+            count++;
+            console.log(count);
+        };
+    }
+
+    const counter = createCounter();
+    console.log(counter);
+    counter();
+    counter();
+    counter();
+
+    //箭头函数
+    const greet = name => `Hello, ${name}`;
+    console.log(greet('zhouyf'));
+
+    const add = (a, b) => {
+        const result = a + b;
+        return result;
+    };
+    console.log(add(1, 2));
+
+
+    const myObject = {
+        myMethod(){
+            setTimeout(() => {
+                console.log(this);
+            }, 10);
+        }
+    };
+    myObject.myMethod();
+
+    function outerFunction(){
+        const arrowFunction = () => {
+            console.log(arguments);
+        }
+        arrowFunction();
+    }
+
+    outerFunction(1, 2);
+
+
+    const zhouyf = {
+        name : 'zhouyf',
+
+        sayHello(){
+            console.log(`Hello, my name is ${this.name}`);
+        }
+    };
+
+    zhouyf.sayHello();
+</script>
+<body>
+    
+</body>
+</html>
