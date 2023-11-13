@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>闭包</title>
+
+    <script>
+      let x = "global";
+
+      function outer() {
+        let x = "outer";
+
+        function inner() {
+          let x = "inner";
+
+          console.log(x);
+        }
+
+        inner(); //inner
+
+        console.log(x); //outer
+      }
+
+      outer();
+
+      console.log(x); //global
+
+      //私有变量
+      function createBankAccount(initialBalance) {
+        let balance = initialBalance;
+
+        return {
+          deposit: function (amount) {
+            balance += amount;
+            return balance;
+          },
+          withdraw: function (amount) {
+            if (balance > amount) {
+              balance -= amount;
+              return balance;
+            } else {
+              return "Insufficient funds";
+            }
+          },
+          checkBalance: function () {
+            return balance;
+          },
+        };
+      }
+
+      const account = createBankAccount(1000);
+      console.log(account.checkBalance());
+      account.deposit(100);
+      console.log(account.checkBalance());
+      account.withdraw(500);
+      console.log(account.checkBalance());
+
+      //封装功能模块
+
+      const calculator = (() => {
+        function add(a, b) {
+          return a + b;
+        }
+
+        function subtract(a, b) {
+          return a - b;
+        }
+
+        return {
+          add,
+          subtract,
+        };
+      })();
+
+      console.log(calculator.add(1, 2));
+      console.log(calculator.subtract(10, 2));
+
+      //给定初始值然后做加减的操作
+      const calculatorPro = ((initNumber) => {
+        function add(a) {
+          return initNumber + a;
+        }
+
+        function subtract(a) {
+          return initNumber - a;
+        }
+
+        return {
+          add,
+          subtract,
+        };
+      })(100);
+
+      console.log(calculatorPro.add(50));
+      console.log(calculatorPro.subtract(50));
+
+      function createButtons() {
+        for (let i = 1; i <= 5; i++) {
+          document.body.innerHTML += `<button>Button ${i}</button>`;
+          document.getElementsByTagName("button")[i - 1].onclick = (function (
+            number
+          ) {
+            return function () {
+              alert("This is button " + number);
+            };
+          })(i);
+        }
+      }
+
+      createButtons();
+    </script>
+  </head>
+  <body></body>
+</html>

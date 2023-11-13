@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>promise</title>
+  </head>
+  <script>
+    // function fetchData() {
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       resolve("Here is your data!");
+    //     }, 1000);
+    //   });
+    // }
+
+    // fetchData()
+    //   .then((data) => {
+    //     console.log(data);
+    //     return "Processing data";
+    //   })
+    //   .then((processData) => {
+    //     console.log(processData);
+    //   })
+    //   .catch((error) => {
+    //     console.log("Error:", error);
+    //   });
+
+    // //模拟用户登录
+    // function logService(username, password) {
+    //   console.log("进行登陆验证");
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       if (username == "zyf" && password == "123") {
+    //         resolve("登录成功");
+    //       } else {
+    //         reject("登录失败");
+    //       }
+    //     }, 2000);
+    //   });
+    // }
+
+    // logService("zyf", "123")
+    //   .then((message) => {
+    //     console.log(message);
+    //   })
+    //   .catch((message) => {
+    //     console.log(message);
+    //   });
+
+    //查询库存
+    function queryInventory(bookId) {
+      console.log(`正在查询id为${bookId}这本书的库存...`);
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          const isHas = true;
+          if (isHas) {
+            console.log(`id为${bookId}这本书有库存`);
+            resolve(bookId);
+          } else {
+            reject("没有库存了");
+          }
+        }, 1000);
+      });
+    }
+
+    //模拟下单
+    function placeOrder(bookId) {
+      console.log(`id为${bookId}这本书正进行下订单操作...`);
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          const isOrder = true;
+          if (isOrder) {
+            console.log(`id为${bookId}这本书已下单`);
+            resolve(bookId);
+          } else {
+            reject("没有被下单");
+          }
+        }, 1000);
+      });
+    }
+
+    //模拟发货
+    function deliverBook(bookId) {
+      console.log(`id为${bookId}这本书正在发货...`);
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          const isDeliver = true;
+          if (isDeliver) {
+            console.log(`id为${bookId}这本书已发货`);
+            resolve(bookId);
+          } else {
+            reject("没有发货");
+          }
+        }, 1000);
+      });
+    }
+
+    queryInventory("111")
+      .then(placeOrder)
+      .then(deliverBook)
+      .then((id) => {
+        console.log(`id为${id}的书成功出售`);
+      })
+      .catch((message) => {
+        console.log(message);
+      });
+  </script>
+  <body></body>
+</html>

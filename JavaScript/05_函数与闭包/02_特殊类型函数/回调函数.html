@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>回调函数</title>
+</head>
+
+ <script>
+    function sayHello(){
+        console.log("hello")
+    }
+
+    function greet(callback){
+        console.log('Greeting:')
+        callback();
+    }
+
+    greet(sayHello);
+
+
+    function fetchData(callback){
+        setTimeout(() => {
+            callback('Here is your data!')
+        }, 1000);
+    }
+
+    function processData(data){
+        console.log(data);
+    }
+
+    fetchData(processData);
+
+ </script>
+<body>
+    
+</body>
+</html>

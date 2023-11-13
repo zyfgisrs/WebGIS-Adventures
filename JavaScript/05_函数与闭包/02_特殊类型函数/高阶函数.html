@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>高阶函数</title>
+  </head>
+
+  <script>
+    //接收函数作为参数
+    function greet(sayHello) {
+      setTimeout(() => {
+        sayHello();
+      }, 1000);
+    }
+
+    function sayHello() {
+      console.log("Hello");
+    }
+
+    greet(sayHello);
+
+    //返回函数作为结果
+    function createGreeting(greet) {
+      return function (name) {
+        return greet + " " + name;
+      };
+    }
+
+    const greetWithHello = createGreeting("Hello");
+    const greetWithBye = createGreeting("Bye");
+
+    console.log(greetWithHello("Alice"));
+    console.log(greetWithBye("Bob"));
+  </script>
+  <body></body>
+</html>

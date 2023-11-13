@@ -13,6 +13,16 @@
         }
 
         showArgs(1, 2, 3);
+
+        function outer(){
+            let inner = () => {
+                console.log(this)
+            }
+
+            inner();
+        }
+
+        const obj =  new outer();
     </script>
 </head>
 <body>
