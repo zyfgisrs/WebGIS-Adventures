@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算模式</title>
+
+    <style>
+        .content {
+            box-sizing: content-box;
+            background-color: blue;
+            width: 300px; /* 宽度仅包括内容 */
+            height: 200px;
+            padding: 10px; /* 内边距 */
+            border: 5px solid black; /* 边框 */
+            margin: 20px; /* 外边距 */
+        }
+
+        .border {
+            box-sizing: border-box;
+            background-color: aqua;
+            width: 300px; /* 宽度包括内容、内边距和边框 */
+            height: 200px;
+            padding: 10px; /* 内边距 */
+            border: 5px solid black; /* 边框 */
+            margin: 20px; /* 外边距 */
+        }
+    </style>
+</head>
+<body>
+    <div class="content">111</div>
+    <div class="border">222</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Absolute Positioning Example</title>
+    <style>
+        .menu {
+            position: relative;
+            width: 200px;
+            background-color: #f0f0f0;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .submenu {
+            position: absolute;
+            top: 40px;
+            left: 20px;
+            width: 150px;
+            background-color: lightblue;
+            padding: 10px;
+            box-sizing: border-box;
+            display: none;
+        }
+
+        .menu:hover .submenu {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu">
+    Hover over me
+    <div class="submenu">
+        Submenu Content
+    </div>
+</div>
+
+</body>
+</html>
